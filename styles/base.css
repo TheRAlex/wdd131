@@ -4,11 +4,24 @@ body{
     font-family: "Montserrat Alternates", sans-serif;
 }
 
+header{
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
 
-header span{
+
+header  span{
     display: block;
     text-align: center;
     background-color: cadetblue;
+    padding: 1.5rem;
+
+}
+
+footer{
+    display: block;
+    text-align: center;
+    background-color: darkcyan;
     padding: 1.5rem;
     text-align: center;
 }
@@ -19,7 +32,7 @@ nav{
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
-    background-color: blueviolet;
+    background-color:#2989b2;
     padding: 1rem;
 }
 
