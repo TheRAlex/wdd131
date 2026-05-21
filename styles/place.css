@@ -22,7 +22,7 @@ header{
     color: var(--accent-color);
     text-align: center;
     padding: 1.5rem;
-    border-bottom: 6px solid var(--secondary-color);
+    border-bottom: 10px solid var(--secondary-color);
 }
 
 header h1{
@@ -32,6 +32,7 @@ header h1{
 
 .hero-section {
     position: relative;
+    width: 100%;
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -50,24 +51,21 @@ main{
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
     max-width: 900px;
     margin: 0 auto;
 }
 
-.data, .weather{
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 1.5rem;
-}.data,
+
+    
+.data,
 .weather {
     background-color: var(--accent-color);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* ✅ agregado */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    padding: 1.5rem; 
 }
 
-/* ✅ Headings de las cards */
+
 .data h2,
 .weather h3 {
     background-color: var(--secondary-color);
@@ -80,10 +78,10 @@ main{
 .data p,
 .weather p {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.2fr 1fr;
   padding: 0.4rem 1.25rem;
   border-bottom: 1px solid #eee;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .data p:last-child,
@@ -98,32 +96,26 @@ main{
     padding-right: 0.75rem;
 }
 
-/* Value — alineado a la izquierda */
+
 .data p span:last-child,
 .weather p span:last-child {
     font-weight: 400;
     text-align: left;
 }
 
-/* =====================
-   WEATHER ICON MOBILE
-   ===================== */
+
 .weather-icon-mobile {
     display: block;
     width: 80px;
     margin: 1rem auto;
 }
 
-/* Emoticon oculto en mobile */
 #weather-heading::after {
     content: "";
 }
 
-/* =====================
-   FOOTER
-   ===================== */
 footer {
-  background-color: var(--primary-color);
+  background-color: #190054;
   color: var(--accent-color);
   text-align: center;
   padding: 1.25rem;
@@ -131,11 +123,11 @@ footer {
 }
 
 footer p {
-  font-size: 0.85rem;
+  font-size: 20px;
   margin: 0.25rem 0;
 }
 
 footer #lastModified {
-  color: #f0c040;
+  color: var(--accent-color);
 }
 

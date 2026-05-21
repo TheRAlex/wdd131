@@ -1,46 +1,43 @@
 @media (min-width: 768px) {
 
     picture img {
-    height: 680px;
-    object-fit: cover;
-  }
+        width: 100%;
+        height: 620px;
+    }
 
-  main {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 2rem;
-    background: none;
-    gap: 0;
-  }
+    main {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+    }
 
-  /* Data — esquina superior izquierda */
-  .data {
-    width: 280px;
-    align-self: flex-start;
-  }
+    .data {
+        width: 300px;        
+        align-self: flex-start;
+    }
 
-  /* Weather — esquina inferior derecha */
-  .weather {
-    width: 220px;
-    align-self: flex-end;
-  }
+    
+    .weather {
+        width: 260px;        
+        align-self: flex-end;  
+        margin-bottom: 1.5rem; 
+        background-color: var(--accent-color);
+    }
 
-  /* Oculta SVG en wide */
-  .weather-icon-mobile {
-    display: none;
-  }
+    .weather-icon-mobile {
+        display: none;
+    }
 
-  /* Muestra emoticón en wide via ::after */
-  #weather-heading::after {
-    content: "⛅";
-    margin-left: 0.5rem;
-    font-size: 1rem;
-  }
+    
+    #weather-heading::after {
+        content: "⛅";
+        margin-left: 0.5rem;
+        font-size: 1rem;
+    }
 }
