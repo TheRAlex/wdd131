@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 | Dynamic Web Fundamentals | Alejandro Cumana </title>
+    <meta name="description" content="Alejandro Cumana WDD131 Week 02 Temples Assignment">
+    <meta name="author" content="Alejandro Cumana">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Chile</h1>
+    </header>
+    <div class="hero-section">
+        <picture>
+            <source srcset="images/chile2.webp" media="(min-width: 768px)">
+            <img src="images/chile1.webp" alt="Chile River" width="800" height="500">
+        </picture>    
+        <main>
+            <section class="data">
+                <h2>Data</h2>
+                <p><span>Area</span> <span>756,102 sq km</span></p>
+                <p><span>Population:</span> <span>18,480,432</span></p>
+                <p><span>Capital:</span> <span>Santiago</span></p>
+                <p><span>Language:</span> <span>Spanish</span></p>
+                <p><span>Currency:</span> <span>Chilenean pesos</span></p>
+                <p><span>Time Zone:</span> <span>UTC-3</span></p>
+                <p><span>Calling Code:</span> <span>+56</span></p>
+                <p><span>Internet TLD:</span> <span>.cl</span></p>
+            </section>
+
+            <section>
+                <h3 id="weather-heading">Weather</h3>
+                <img src="images/weather.svg" alt="Weather icon" class="weather-icon-mobile">
+                <p>Temperature: <span>10°C</span></p>
+                <p>Conditions: <span>18 km/h</span></p>
+                <p>Wind: <span>Partly Cloudy</span></p>
+                <p>Wind Chill: <span id="windchill"></span></p>
+            </section>
+            
+        </main>
+    </div>
+    <footer>
+        <p>
+            &copy;
+            <span id="currentyear"></span> 
+            Alejandro Cumana | Santiago, Chile 
+        </p>
+
+        <p id="lastModified">
+            
+        </p>
+    </footer>
+</body>
+</html>
