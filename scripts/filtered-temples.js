@@ -72,7 +72,7 @@ const temples = [
     dedicated: "2012, June, 10",
     area: 32032,
     imageUrl:
-    "https://churchofjesuschristtemples.org/assets/img/temples/manaus-brazil-temple/manaus-brazil-temple-59692.jpg"
+    "images/manaus.jpg"
   },
   {
     templeName: "Mendoza",
@@ -80,14 +80,91 @@ const temples = [
     dedicated: "2024, September, 22",
     area: 21999,
     imageUrl:
-    "https://churchofjesuschristtemples.org/assets/img/temples/mendoza-argentina-temple/mendoza-argentina-temple-53413.jpg"
-  },
-  {
-    templeName: "Barranquilla",
-    location: "Barranquilla, Colombia",
-    dedicated: "2018, December, 09",
-    area: 25349,
-    imageUrl:
-    "https://churchofjesuschristtemples.org/assets/img/temples/barranquilla-colombia-temple/barranquilla-colombia-temple-61993.jpg"
+    "images/mendoza.jpg"
   },
 ];
+  
+createTempleCard(temples);
+
+
+function createTempleCard(filteredTemples) {
+
+  document.querySelector(".res-grid").innerHTML = "";
+
+  filteredTemples.forEach(temple => {
+
+    let card = document.createElement("section");
+    let name = document.createElement("h2");
+    let location = document.createElement("p");
+    let dedication = document.createElement("p");
+    let area = document.createElement("p");
+    let img = document.createElement("img");
+
+    name.textContent = temple.templeName;
+
+    location.innerHTML =
+      `<span class="label">Location:</span> ${temple.location}`;
+
+    dedication.innerHTML =
+      `<span class="label">Dedicated:</span> ${temple.dedicated}`;
+
+    area.innerHTML =
+      `<span class="label">Size:</span> ${temple.area} sq ft`;
+
+    img.setAttribute("src", temple.imageUrl);
+
+    img.setAttribute("alt", `${temple.templeName} Temple`);
+
+    img.setAttribute("loading", "lazy");
+
+    card.appendChild(name);
+    card.appendChild(location);
+    card.appendChild(dedication);
+    card.appendChild(area);
+    card.appendChild(img);
+
+    document.querySelector(".res-grid").appendChild(card);
+  });
+
+  
+document.querySelector("#home").addEventListener("click", () => {
+  createTempleCard(temples);
+});
+
+
+document.querySelector("#old").addEventListener("click", () => {
+  const oldTemples = temples.filter(temple =>
+    parseInt(temple.dedicated) < 1900
+  );
+
+  createTempleCard(oldTemples);
+});
+
+
+document.querySelector("#new").addEventListener("click", () => {
+  const newTemples = temples.filter(temple =>
+    parseInt(temple.dedicated) > 2000
+  );
+
+  createTempleCard(newTemples);
+});
+
+
+document.querySelector("#large").addEventListener("click", () => {
+  const largeTemples = temples.filter(temple =>
+    temple.area > 90000
+  );
+
+  createTempleCard(largeTemples);
+});
+
+
+document.querySelector("#small").addEventListener("click", () => {
+  const smallTemples = temples.filter(temple =>
+    temple.area < 10000
+  );
+
+  createTempleCard(smallTemples);
+});
+
+}
