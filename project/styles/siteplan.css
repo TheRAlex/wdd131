@@ -4,3 +4,9 @@
     --accent-color: #f50b0b;
     --background-color: #6c717c;
 }
+
+body{
+    margin: auto 0;
+    font-family:"Black Ops One";
+    max-width: 800px;
+}
