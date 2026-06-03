@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+}
+
+header,main,footer{
+    max-width:900px;
+    margin: 0 auto;
+}
+
+header{
+    background-color: #4b0053;
+    color: white;
+    text-align: center;
+}
+
+main{
+    background-color: #9a839b;
+    padding: 30px;
+	color: white;
+    border: 1px solid black;
+    text-align: center;
+}
+
+body{
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    background-color: #f4f4f4;
+}
+
+footer{
+    background-color: #4b0053;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
